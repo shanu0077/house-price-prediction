@@ -43,7 +43,7 @@
               <input type="text"  placeholder="{{input_json.loca}}" required>
             </div>
             <div class="input-box">
-              <span class="details">Area</span>
+              <span class="details">Area(Sqft)</span>
               <input type="number"  placeholder="{{input_json.area}}" required>
             </div>
             <div class="input-box">
@@ -56,7 +56,7 @@
             </div>
             
           <div class="button">
-            <h1><b>ESTIMATED PRICE: {{result}}</b></h1>  <a class="nav-link" href="{% url 'accounts:index' %}">Home</a>
+            <h1><b>ESTIMATED PRICE: {{result}}</b></h1>  <a class="nav-link" href="{% url 'index' %}">Home</a>
           </div>
         </form>
 

@@ -169,6 +169,9 @@ def editbtn(request, name):
 def payment(request):
     return render(request, 'payment.html')
 
+def payments(request):
+    return render(request, 'payments.html')
+
 
 def logout_user(request):
     request.session.flush()

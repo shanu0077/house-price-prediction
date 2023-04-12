@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+   <head class="headers">
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>keto</title>
+      <title>hpp</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -41,7 +41,7 @@
                     <div class="full">
                        <div class="center-desk">
                           <div class="logo">
-                             <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
+                             <a href="accounts:index.html"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
                           </div>
                        </div>
                     </div>
@@ -53,9 +53,15 @@
                        </button>
                        <div class="collapse navbar-collapse" id="navbarsExample04">
                           <ul class="navbar-nav mr-auto">
+                           
+                              <a class="nav-link" href="{% url 'index' %}">Home</a>
+                           </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">{{dis.username}}</a>
                              </li>
+                             <li class="nav-item">
+                              <a class="nav-link" href="{% url 'accounts:home' %}">House Price Prediction</a>
+                           </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
                              </li>
@@ -68,8 +74,43 @@
            </div>
         </div>
      </header>
+     
+     <div class="booking_ocline">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="book_room">
+                  <!-- <h1>Search Hotels</h1> -->
+                  <form class="book_now" method="post" action="{% url 'accounts:search' %}">
+                     {%csrf_token%}
+                     <div class="row">
+                        <div class="col-md-10">
+                           <h1><label style="color: white;">Select Your Location</label></h1><br>
+                           <select name="hotelloc" class="col-md-10">
+                              <option value="1st block jayanagar">1st block jayanagar</option>
+                              <option value="yelahanka">yelahanka</option>
+                              <option value="yelenahalli">yelenahalli</option>
+                              <option value="yeshwanthpur">yeshwanthpur</option>
+                              <option value="whitefield">whitefield</option>
+                              </select>
+                        </div>
+                        <div class="col-md-2">
+                           <!-- <button class="book_btn2">Search hotels</button> -->
+                           <button class="book_btn2">Search Appartment</button>
+                        </div>
+                     </div>
+                  </form>
 
-
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<br><br>
+<br><br>
+<br><br>
+<br><br><br><br>
+<br><br>
      <!-- rent -->
     <div  class="our_room">
         <div class="container">
@@ -154,5 +195,60 @@
          </div>
       </div>
    </div>
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class=" col-md-4">
+                  <h3>Contact US</h3>
+                  <ul class="conta">
+                     <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
+                     <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
+                     <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-4">
+                  <h3>Menu Link</h3>
+                  <ul class="link_menu">
+                     <li class="active"><a href="#">Home</a></li>
+                     <li><a href="about.html"> about</a></li>
+                     <li><a href="room.html">Our Room</a></li>
+                     <li><a href="gallery.html">Gallery</a></li>
+                     <li><a href="blog.html">Blog</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-4">
+                  <h3>News letter</h3>
+                  <form class="bottom_form">
+                     <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                     <button class="sub_btn">subscribe</button>
+                  </form>
+                  <ul class="social_icon">
+                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+
+                     <p>
+                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Shanu</a>
+                        <br><br>
+                       
+                     </p>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
    </body>
 </html>

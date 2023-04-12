@@ -35,7 +35,7 @@
     <div class="container">
       <div class="title">BOOK YOUR APPARTMENT</div>
       <div class="content">
-        <form method="post" action="">{% csrf_token %}
+        <form method="post" action="{% url 'accounts:payment'  %}">{% csrf_token %}
           <div class="user-details">
             <div class="input-box">
               <span class="details">Name</span>
@@ -64,13 +64,13 @@
             </div>
             <div class="input-box">
               <span class="details">Id Proof</span>
-              <input type="file" name="image" placeholder="Upload images" multiple required>
+              <input type="file" name="image" placeholder="Upload your id" multiple required>
             </div>
             
           <div class="button">
             <form method="post" action="{% url 'accounts:payment'  %}" >
               {% csrf_token %}
-             <button  class="send_btn" type="submit" value="Book Now" href="{% url 'accounts:payment'  %}" style="width: 90px; background-color: darkcyan; border-radius: 20px;">Book Now</button>
+             <button  class="send_btn" type="submit" value="Book Now"  style="width: 90px; background-color: darkcyan; border-radius: 20px;">Pay Now</button>
               </form>    
           </div>
         </form>

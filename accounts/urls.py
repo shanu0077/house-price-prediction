@@ -28,4 +28,5 @@ urlpatterns = [
     path('editbtn/<str:name>', views.editbtn, name='editbtn'),
     path('payment/', views.payment, name='payment'),
     path('search/', views.search, name='search'),
+    path('payments/', views.payments, name='payments'),
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

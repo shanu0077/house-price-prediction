@@ -34,7 +34,7 @@
 </head>
 <!-- body -->
 
-<body class="main-layout">
+<body class="main-layout" >
    <!-- loader  -->
    <div class="loader_bg">
       <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
@@ -78,9 +78,9 @@
                            <!-- <li class="nav-item">
                                  <a class="nav-link" href="blog.html">Blog</a>
                               </li> -->
-                           <li class="nav-item">
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="{% url 'accounts:contact' %}">Contact Us</a>
-                           </li>
+                           </li> -->
                            <li class="nav-item">
                               <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
                            </li>
@@ -158,7 +158,9 @@
          </div>
       </div>
    </section>
-   <!-- end banner -->
+
+
+   <!-- rent -->
    <div class="our_room">
       <div class="container">
          <div class="row">
@@ -186,11 +188,10 @@
                        <p>Bathrooms:{{i.bathrooms}}</p>
                        <p>Amount: ₹{{i.price}}</p>
                        <p>{{i.propdesc}}</p>
+                       <a class="send_btn" type="submit" value="Book Now" href="{% url 'accounts:login' %}"
+                       style="width: 90px; background-color: darkcyan; border-radius: 20px;">Book Now</a>
                   </div>
-                  <a class="send_btn" type="submit" value="Book Now" href="{% url 'accounts:login' %}"
-                  style="width: 90px; background-color: darkcyan; border-radius: 20px;">Book Now</a>
                </div>
-
             </div>
             {% endif %}
             {%endfor%}
@@ -216,11 +217,11 @@
             {%for i in appartments%}
             {% if 'sale' in i.rent%}
             <div class="col-md-4 col-sm-6">
-               <div id="serv_hover" class="room">
+               <div id="serv_hover" class="room"  > 
                   <div class="room_img">
                      <img src="{{i.cimage.url}}" />
                   </div>
-                  <div class="bed_room">
+                  <div class="bed_room  bg-fail"  >
                      <h3>{{i.appartmentname }}</h3>
                      <p>Address:{{i.address}}</p>
                      <p>Location:{{i.location}}</p>
@@ -242,6 +243,7 @@
          </div>
       </div>
    </div>
+
    <!-- about -->
    <div class="about">
       <div class="container-fluid">
@@ -249,16 +251,13 @@
             <div class="col-md-5">
                <div class="titlepage">
                   <h2>About Us</h2>
-                  <p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their
-                     dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their
-                     software. Today it's seen all around the web; on templates, websites, and stock designs. Use our
-                     generator to get your own, or read on for the authoritative history of lorem ipsum. </p>
+                  <p>Welcome to our website! Our project aims to make the process of finding a new home easier and more accessible than ever before. Whether you're looking to rent or buy a property, we provide a comprehensive platform that allows you to search through a wide range of options and find the one that meets your specific needs and budget. In addition to helping you find your dream home, we also offer a unique feature that allows you to predict the future price of a property based on current market trends and other relevant factors.  </p>
                   <a class="read_more" href="Javascript:void(0)"> Read More</a>
                </div>
             </div>
             <div class="col-md-7">
                <div class="about_img">
-                  <figure><img src="{% static 'images/about.png' %}" alt="#" /></figure>
+                  <figure><img src="{% static 'images/room4.jpg' %}" alt="#" /></figure>
                </div>
             </div>
          </div>
@@ -358,9 +357,9 @@
                   <div class="col-md-10 offset-md-1">
 
                      <p>
-                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
+                        © 2023 All Rights Reserved. Design by <a href="https://html.design/"> Shanu</a>
                         <br><br>
-                        Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                        <!-- Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a> -->
                      </p>
 
                   </div>
