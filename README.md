@@ -1,2 +1,2 @@
 # house-price-prediction
- house
+ house renting,buying and price prediction
